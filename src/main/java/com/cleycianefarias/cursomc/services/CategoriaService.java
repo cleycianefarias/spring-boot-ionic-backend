@@ -9,6 +9,7 @@ import com.cleycianefarias.cursomc.repositories.CategoriaRepository;
 import com.cleycianefarias.cursomc.services.exceptions.DataIntegrityException;
 import com.cleycianefarias.cursomc.services.exceptions.ObjectNotFoundException;
 
+import java.util.List;
 import java.util.Optional;
 @Service
 public class CategoriaService {
@@ -41,5 +42,9 @@ public class CategoriaService {
 			throw new DataIntegrityException("Não é possivel excluir uma categoria que possui produtos");
 			
 		}
+	}
+	
+	public List<Categoria> findAll(){
+		return repo.findAll();
 	}
 }
