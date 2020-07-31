@@ -31,7 +31,6 @@ public class ResourceExceptionHandler {
 	}
 
 	
-	
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<StandardError> validation(MethodArgumentNotValidException e, HttpServletRequest request) {
 
